@@ -32,7 +32,13 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = (
     'project',
-    'apps.api',
+    'metsing.apps.api',
+    'metsing',
+
+    'rest_framework',
+    'localflavor',
+    'django_countries',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -51,6 +57,15 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
 )
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
+
 
 ROOT_URLCONF = 'project.urls'
 

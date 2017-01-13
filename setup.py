@@ -10,6 +10,9 @@ setup(
     install_requires=[
         'Django',
         'djangorestframework',
+        'django-countries',
+        'django-localflavor',
+        'django-model-utils',
     ],
     package_dir={'': 'src'},
     packages=find_packages('src'),
