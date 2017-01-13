@@ -4,7 +4,7 @@ from rest_framework import routers
 from metsing.apps.api.views import UserProfileViewSet
 
 router = routers.DefaultRouter()
-router.register(r'profile', UserProfileViewSet, base_name='user-profile')
+router.register(r'user/profile', UserProfileViewSet, base_name='user-profile')
 
 urlpatterns = [
     url(r'^', include(router.urls)),
